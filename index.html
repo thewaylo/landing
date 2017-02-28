@@ -956,7 +956,7 @@
 		
 		});
 
-function parsedate(date,inc){
+	function parsedate(date,inc){
 		
 		Date.prototype.addDays = function(days) {
 			this.setDate(this.getDate() + parseInt(days));
@@ -968,10 +968,13 @@ function parsedate(date,inc){
 			var cur_month=current_date.getMonth();
 			var cur_year=current_date.getUTCFullYear();
 		
-			current_date=cur_year+"-"+(cur_month+1)+"-"+cur_day;
+			current_date=cur_year+"-"+pad(cur_month+1)+"-"+pad(cur_day);
 			return current_date;
 
-}
+		}
+		function pad(n) {
+		    return (n < 10) ? ("0" + n) : n;
+		}
 		function init() {
 			
   
