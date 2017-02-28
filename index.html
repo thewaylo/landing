@@ -985,7 +985,9 @@ function parsedate(date,inc){
 						 var newdate=new Date(ev.date);
 						 console.log(newdate.getMonth());
 				    $('#dateend').datepicker({
-						startDate:newdate
+	    				    	format:"yyyy-mm-dd",
+						startDate:newdate,
+						autoclose: true
 						
 						}).val(parsedate(newdate,1));//Auto changing checkout date
 						
