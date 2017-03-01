@@ -989,7 +989,7 @@ function pad(n) {
 			startDate: startdate,
 			autoclose: true
 			
-		}).val(parsedate(startdate,4))//check in day tomorrow
+		}).val(parsedate(startdate,6))//check in day tomorrow
 			.on('changeDate',function(ev){ //If check in date changes
 			 var newdate=new Date(ev.date);
 			 // console.log(newdate.getMonth());
@@ -1001,6 +1001,15 @@ function pad(n) {
 						
 							
 		});
+
+		$('#dateend').datepicker({
+			format:"yyyy-mm-dd",
+			startDate:startdate,
+			// startDate: '+4d',
+			autoclose: true
+
+		}).val(parsedate(startdate,1))
+
 	
 	
 
